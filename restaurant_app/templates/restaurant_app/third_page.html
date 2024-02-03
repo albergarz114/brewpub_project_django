@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Beverages</h1>
+    <ul>
+        {% for beverage in beverages %}
+        <li><a href="{% url 'third_detail' name=beverage.name %}">{{ beverage.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'intro_page' %}"><button>Go to Main Page</button></a></p>
+</body>
+</html>

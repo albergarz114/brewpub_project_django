@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+</head>
+<body>
+    
+    <h3>Make Reservations</h3>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        
+
+        <p><button type="submit">Submit</button></p>
+    </form>
+
+    <p><a href="{% url 'intro_page' %}"><button>Go to main page</button></a></p>
+
+</body>
+
+ 
